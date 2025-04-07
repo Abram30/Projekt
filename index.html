@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konferencja UI/UX - Najnowsze Trendy</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        function switchLanguage(lang) {
-            document.querySelectorAll('.lang-content').forEach(function(section) {
-                section.classList.remove('active');
-            });
-            document.querySelectorAll('.lang-' + lang).forEach(function(section) {
-                section.classList.add('active');
-            });
-        }
-        window.onload = function() { switchLanguage('pl'); };
-    </script>
-</head>
-<body>
-    <div class="lang-switcher">
-        <button onclick="switchLanguage('pl')">🇵🇱 PL</button>
-        <button onclick="switchLanguage('en')">🇬🇧 EN</button>
-    </div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konferencja UI/UX</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll(`.lang-${lang}`).forEach(el => el.classList.add('active'));
 
-    <header>
-        <div class="container">
-            <h1 class="lang-content lang-pl active">Konferencja UI/UX - Najnowsze Trendy</h1>
-            <h1 class="lang-content lang-en">UI/UX Conference - Latest Trends</h1>
-            <nav>
-                <ul>
-                    <li><a href="#uiux">UI/UX</a></li>
-                    <li><a href="#misja">Misja / Mission</a></li>
-                    <li><a href="#uczestnicy">Uczestnicy / Participants</a></li>
-                    <li><a href="#patronaty">Patronaty / Patronage</a></li>
-                    <li><a href="#komitet">Komitet / Committee</a></li>
-                    <li><a href="#agenda">Agenda</a></li>
-                    <li><a href="#prelegenci">Prelegenci / Speakers</a></li>
-                    <li><a href="#informacje">Informacje / Info</a></li>
-                    <li><a href="#kontakt">Kontakt / Contact</a></li>
-                    <li><a href="#zgloszenie">Zgłoszenie / Submission</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+      // Switch navigation text
+      const navLinks = document.querySelectorAll('nav a');
+      if (lang === 'pl') {
+        navLinks[0].textContent = "UI/UX";
+        navLinks[1].textContent = "Misja";
+        navLinks[2].textContent = "Uczestnicy";
+        navLinks[3].textContent = "Patronaty";
+        navLinks[4].textContent = "Komitet";
+        navLinks[5].textContent = "Agenda";
+        navLinks[6].textContent = "Prelegenci";
+        navLinks[7].textContent = "Informacje";
+        navLinks[8].textContent = "Kontakt";
+        navLinks[9].textContent = "Zgłoszenie";
+      } else {
+        navLinks[0].textContent = "UI/UX";
+        navLinks[1].textContent = "Mission";
+        navLinks[2].textContent = "Participants";
+        navLinks[3].textContent = "Patronage";
+        navLinks[4].textContent = "Committee";
+        navLinks[5].textContent = "Agenda";
+        navLinks[6].textContent = "Speakers";
+        navLinks[7].textContent = "Info";
+        navLinks[8].textContent = "Contact";
+        navLinks[9].textContent = "Submission";
+      }
+    }
+  </script>
+</head>
+<body onload="switchLanguage('pl')">
+  <header>
+    <div class="language-switch">
+      <button onclick="switchLanguage('pl')">PL</button>
+      <button onclick="switchLanguage('en')">EN</button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#uiux">UI/UX</a></li>
+        <li><a href="#misja">Misja</a></li>
+        <li><a href="#uczestnicy">Uczestnicy</a></li>
+        <li><a href="#patronaty">Patronaty</a></li>
+        <li><a href="#komitet">Komitet</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#prelegenci">Prelegenci</a></li>
+        <li><a href="#informacje">Informacje</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#zgloszenie">Zgłoszenie</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <section id="uiux" class="section">
         <div class="container">
@@ -189,11 +205,13 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p class="lang-content lang-pl active">&copy; 2025 Konferencja UI/UX - Wszystkie prawa zastrzeżone</p>
-            <p class="lang-content lang-en">&copy; 2025 UI/UX Conference - All rights reserved</p>
-        </div>
-    </footer>
+  <footer class="section">
+    <div class="lang-content lang-pl active">
+      <p>&copy; 2025 Konferencja UI/UX</p>
+    </div>
+    <div class="lang-content lang-en">
+      <p>&copy; 2025 UI/UX Conference</p>
+    </div>
+  </footer>
 </body>
 </html>
