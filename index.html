@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konferencja UI/UX - Najnowsze Trendy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .lang-switcher {
+            text-align: right;
+            margin: 10px;
+        }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+    </style>
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('.lang-content').forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.querySelectorAll('.lang-' + lang).forEach(function(section) {
+                section.classList.add('active');
+            });
+        }
+        window.onload = function() { switchLanguage('pl'); };
+    </script>
+</head>
+<body>
+    <div class="lang-switcher">
+        <button onclick="switchLanguage('pl')">🇵🇱 PL</button>
+        <button onclick="switchLanguage('en')">🇬🇧 EN</button>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1 class="lang-content lang-pl active">Konferencja UI/UX - Najnowsze Trendy</h1>
+            <h1 class="lang-content lang-en">UI/UX Conference - Latest Trends</h1>
+            <nav>
+                <ul>
+                    <li><a href="#uiux">UI/UX</a></li>
+                    <li><a href="#misja">Misja / Mission</a></li>
+                    <li><a href="#uczestnicy">Uczestnicy / Participants</a></li>
+                    <li><a href="#patronaty">Patronaty / Patronage</a></li>
+                    <li><a href="#komitet">Komitet / Committee</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#prelegenci">Prelegenci / Speakers</a></li>
+                    <li><a href="#informacje">Informacje / Info</a></li>
+                    <li><a href="#kontakt">Kontakt / Contact</a></li>
+                    <li><a href="#zgloszenie">Zgłoszenie / Submission</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="uiux" class="section">
+        <div class="container">
+            <div class="lang-content lang-pl active">
+                <h2>Czym jest UI/UX?</h2>
+                <p><strong>UI (User Interface)</strong> to interfejs użytkownika. <strong>UX (User Experience)</strong> to doświadczenie użytkownika w interakcji z produktem cyfrowym.</p>
+            </div>
+            <div class="lang-content lang-en">
+                <h2>What is UI/UX?</h2>
+                <p><strong>UI (User Interface)</strong> refers to the user interface – the visual elements a user interacts with. <strong>UX (User Experience)</strong> is the user's experience when using a product, focusing on usability and satisfaction.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="misja" class="section">
+        <div class="container">
+            <div class="lang-content lang-pl active">
+                <h2>Misja</h2>
+                <p>Naszą misją jest szerzenie wiedzy o roli projektowania UI/UX w nowoczesnych produktach cyfrowych.</p>
+            </div>
+            <div class="lang-content lang-en">
+                <h2>Mission</h2>
+                <p>Our mission is to spread awareness about the role of UI/UX design in modern digital products.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="uczestnicy" class="section">
+        <div class="container">
+            <div class="lang-content lang-pl active">
+                <h2>Uczestnicy</h2>
+                <p>W konferencji biorą udział projektanci, programiści, menedżerowie produktu, badacze UX oraz studenci i pasjonaci nowych technologii.</p>
+            </div>
+            <div class="lang-content lang-en">
+                <h2>Participants</h2>
+                <p>The conference welcomes designers, developers, product managers, UX researchers, students, and technology enthusiasts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="patronaty" class="section">
+        <div class="container">
+            <div class="lang-content lang-pl active">
+                <h2>Patronaty</h2>
+                <p>Wydarzenie objęte jest patronatem uczelni technicznych, firm branży IT oraz mediów specjalistycznych związanych z designem i technologią.</p>
+            </div>
+            <div class="lang-content lang-en">
+                <h2>Patronage</h2>
+                <p>The event is under the patronage of technical universities, IT companies, and media specializing in design and technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="komitet" class="section">
+        <div class="container">
+            <div class="lang-content lang-pl active">
+                <h2>Komitet organizacyjny</h2>
+                <p>Komitet składa się z przedstawicieli środowisk akademickich oraz ekspertów branżowych z doświadczeniem w zakresie UX/UI i organizacji wydarzeń.</p>
+            </div>
+            <div class="lang-content lang-en">
+                <h2>Organizing Committee</h2>
+                <p>The committee includes representatives of academic communities and industry experts experienced in UX/UI and event organization.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="agenda" class="section">
+        <div class="container">
+            <div class="lang-content lang-pl active">
+                <h2>Agenda</h2>
+                <h3>Dzień 1</h3>
+                <ul>
+                    <li>09:00 - Rejestracja</li>
+                    <li>10:00 - Otwarcie konferencji</li>
+                    <li>11:00 - Wykłady tematyczne</li>
+                    <li>14:00 - Panel dyskusyjny</li>
+                </ul>
+                <h3>Dzień 2</h3>
+                <ul>
+                    <li>09:00 - Warsztaty praktyczne</li>
+                    <li>12:00 - Prezentacje projektów</li>
+                    <li>15:00 - Zakończenie i networking</li>
+                </ul>
+            </div>
+            <div class="lang-content lang-en">
+                <h2>Agenda</h2>
+                <h3>Day 1</h3>
+                <ul>
+                    <li>09:00 - Registration</li>
+                    <li>10:00 - Conference Opening</li>
+                    <li>11:00 - Keynote Presentations</li>
+                    <li>14:00 - Discussion Panel</li>
+                </ul>
+                <h3>Day 2</h3>
+                <ul>
+                    <li>09:00 - Practical Workshops</li>
+                    <li>12:00 - Project Presentations</li>
+                    <li>15:00 - Closing and Networking</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="prelegenci" class="section">
+        <div class="container">
+            <div class="lang-content lang-pl active">
+                <h2>Prelegenci</h2>
+                <p>Wśród prelegentów znajdą się uznani eksperci m.in. z Google, Adobe oraz startupów z Doliny Krzemowej.</p>
+            </div>
+            <div class="lang-content lang-en">
+                <h2>Speakers</h2>
+                <p>Our speakers include renowned experts from companies such as Google, Adobe, and Silicon Valley startups.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="informacje" class="section">
+        <div class="container">
+            <div class="lang-content lang-pl active">
+                <h2>Informacje użytkowe</h2>
+                <p><strong>Noclegi:</strong> Polecamy hotele w pobliżu centrum konferencyjnego. Zniżki dostępne dla uczestników wydarzenia.</p>
+                <p><strong>Dojazd:</strong> Miejsce konferencji znajduje się w centrum miasta, z dobrym dostępem do komunikacji miejskiej.</p>
+            </div>
+            <div class="lang-content lang-en">
+                <h2>Useful Information</h2>
+                <p><strong>Accommodation:</strong> We recommend hotels near the conference center. Discounts are available for participants.</p>
+                <p><strong>Transport:</strong> The venue is located in the city center with easy access to public transportation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="section">
+        <div class="container">
+            <div class="lang-content lang-pl active">
+                <h2>Kontakt</h2>
+                <p>Email: kontakt@konferencja-uiux.pl</p>
+                <p>Telefon: +48 123 456 789</p>
+            </div>
+            <div class="lang-content lang-en">
+                <h2>Contact</h2>
+                <p>Email: contact@conference-uiux.com</p>
+                <p>Phone: +48 123 456 789</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="lang-content lang-pl active">&copy; 2025 Konferencja UI/UX - Wszystkie prawa zastrzeżone</p>
+            <p class="lang-content lang-en">&copy; 2025 UI/UX Conference - All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
